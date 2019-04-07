@@ -1,0 +1,11 @@
+demo:
+  profiles: dev
+  book:
+    name: 《Spring Boot 2.x 核心技术实战 - 上 基础篇》From YMAL-DEV
+    writer: 泥瓦匠BYSocket From YMAL-DEV
+## 随机属性
+user:
+  id: ${random.long}
+  age: ${random.int[1,200]}
+  desc: 泥瓦匠叫做${random.value}
+  uuid: ${random.uuid}

@@ -1,8 +1,9 @@
 ## 书信息
 demo:
+    profiles: prod
     book:
-        name: 《Spring Boot 2.x 核心技术实战 - 上 基础篇》From YMAL
-        writer: 泥瓦匠BYSocket From YMAL
+        name: 《Spring Boot 2.x 核心技术实战 - 上 基础篇》From YMAL-PROD
+        writer: 泥瓦匠BYSocket From YMAL-PROD
 ## 随机属性
 user:
     id: ${random.long}
