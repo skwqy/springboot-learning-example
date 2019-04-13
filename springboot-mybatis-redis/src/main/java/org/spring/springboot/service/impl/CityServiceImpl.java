@@ -30,6 +30,11 @@ public class CityServiceImpl implements CityService {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Override
+    public List<City> findAllCity() {
+        return cityDao.findAllCity();
+    }
+
     /**
      * 获取城市逻辑：
      * 如果缓存存在，从缓存中获取城市信息
@@ -53,8 +58,10 @@ public class CityServiceImpl implements CityService {
         City city = cityDao.findById(id);
 
         // 插入缓存
-        operations.set(key, city, 10, TimeUnit.SECONDS);
-        LOGGER.info("CityServiceImpl.findCityById() : 城市插入缓存 >> " + city.toString());
+        if (null != city) {
+            operations.set(key, city, 10, TimeUnit.SECONDS);
+            LOGGER.info("CityServiceImpl.findCityById() : 城市插入缓存 >> " + city.toString());
+        }
 
         return city;
     }

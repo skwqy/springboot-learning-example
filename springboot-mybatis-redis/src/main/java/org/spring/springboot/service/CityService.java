@@ -10,6 +10,14 @@ import java.util.List;
  * Created by bysocket on 07/02/2017.
  */
 public interface CityService {
+
+    /**
+     * 根据城市 ID,查询城市信息
+     *
+     * @return
+     */
+    List<City> findAllCity();
+
     /**
      * 根据城市 ID,查询城市信息
      *
